@@ -14,9 +14,9 @@ while(user_pin != pin && !out_of_pin_trials){
         user_pin = prompt('Enter your PIN here:');
         pin_count += 1;
         if (pin_count == 1 && user_pin != pin) {
-            console.log('Incorrect input! You have 2 trials left');
+            alert('Incorrect input! You have 2 trials left');
         } else if (pin_count == 2 && user_pin != pin){
-            console.log('Incorrect input! You have 1 trial left');
+            alert('Incorrect input! You have 1 trial left');
         }
     } else {
         out_of_pin_trials = true;
@@ -24,7 +24,7 @@ while(user_pin != pin && !out_of_pin_trials){
 }
 
 if (out_of_pin_trials) {
-    console.log('You have reached maximum no. of trials, enter SIM PUK to continue');
+    alert('You have reached maximum no. of trials, enter SIM PUK to continue');
 
     let puk_number = '12345678';
     let user_puk = '';
@@ -37,9 +37,9 @@ if (out_of_pin_trials) {
             user_puk = prompt('Enter your SIM PUK here:');
             puk_count += 1;
             if (puk_count == 1 && user_puk != puk_number) {
-                console.log('Incorrect input! You have 2 trials left');
+                alert('Incorrect input! You have 2 trials left');
             } else if (puk_count == 2 && user_puk != puk_number){
-                console.log('Incorrect input! You have 1 trial left');
+                alert('Incorrect input! You have 1 trial left');
             }
         } else {
             out_of_puk_trials = true;
@@ -47,7 +47,7 @@ if (out_of_pin_trials) {
     }
 
     if (out_of_puk_trials) {
-        console.log('You have been permanently barred, kindly visit our nearest centre.');
+        alert('You have been permanently barred, kindly visit our nearest centre.');
     } else {
         console.log('Welcome Back', user_name, '!');
     }
